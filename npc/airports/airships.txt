@@ -519,11 +519,11 @@ airplane,50,66,5	script	Vendedor de Maçãs#airplane	86,{
 		}
 		if (Zeny < .@pay) {
 			mes "[Fruitz]";
-			mes "I'm sorry, but you don't";
-			mes "have enough money to";
-			mes "purchase that many Apples.";
-			mes "Please check your zeny or";
-			mes "purchase fewer Apples.";
+			mes "Me desculpe, mas você não possui";
+			mes "a quantidade de zenys necessária";
+			mes "para comprar essas Maçãs.";
+			mes "Por favor verifique a quantidade de zenys";
+			mes "que você possui e quantas Maçãs quer comprar.";
 			close;
 		}
 		else if (checkweight(512,.@input) == 0) {
