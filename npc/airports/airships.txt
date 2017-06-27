@@ -528,121 +528,121 @@ airplane,50,66,5	script	Vendedor de Maçãs#airplane	86,{
 		}
 		else if (checkweight(512,.@input) == 0) {
 			mes "[Fruitz]";
-			mes "Hmmm, I don't think";
-			mes "you've got enough room in";
-			mes "your inventory to carry this";
-			mes "many Apples. Why don't you free up some of your inventory space?";
+			mes "Humm, eu acho que você não pode carregar mais itens";
+			mes "em seu inventário, assim não pode comprar mais Maçãs.";
+			mes "Você poderia liberar um pouco";
+			mes "de espaço em seu inventário?";
 			close;
 		}
 		else {
 			set Zeny, Zeny - .@pay;
 			getitem 512,.@input; //Apple
 			mes "[Fruitz]";
-			mes "Thanks for stopping by";
-			mes "my shop. I hope you enjoy";
-			mes "the flavor of these Apples~!";
+			mes "Obrigado por visitar minha banca.";
+			mes "Adeus! Venha quando você";
+			mes "sentir que precisa de uma Maçã ~!";
 			close;
 		}
 	case 2:
 		mes "[Fruitz]";
-		mes "Okay, I'll need";
-		mes "^FF00003 Apples and 1 Empty Bottle^000000";
-		mes "to make 1 Apple Juice for you.";
-		mes "Would you like to proceed?";
+		mes "Tudo bem, irei precisar de";
+		mes "^FF00003 Maçãs e 1 Garrafa Vazia^000000";
+		mes "para criar 1 Suco de Maçã para você.";
+		mes "Você deseja continuar?";
 		next;
-		switch (select("Yes:No")) {
+		switch (select("Sim:Não")) {
 		case 1:
 			if (countitem(512) < 3 || countitem(713) < 1) {
 				mes "[Fruitz]";
-				mes "I'm sorry, but you don't";
-				mes "have enough materials to";
-				mes "create a bottle of Apple Juice.";
-				mes "Remember, I need 3 Apples";
-				mes "and 1 Empty Bottle to do it.";
+				mes "Me desculpe,mas você não possui";
+				mes "os materiais suficientes para criar";
+				mes "uma Garrafa de Suco de Maçã.";
+				mes "Lembre-se, irei precisar de";
+				mes "3 Maçãs e 1 Garrafa Vazia.";
 				close;
 			}
 			else {
 				mes "[Fruitz]";
-				mes "Thank you,";
-				mes "please wait";
-				mes "just a moment.";
+				mes "Obrigado,";
+				mes "por favor espere";
+				mes "um momento.";
 				next;
-				mes "^3355FF*Grind grind*";
-				mes "*Grind grind*";
+				mes "^3355FF*Moer moer*";
+				mes "*Moer moer*";
 				mes "*Clang...!*^000000";
 				next;
-				delitem 512,3; //Apple
-				delitem 713,1; //Empty_Bottle
-				getitem 531,1; //Apple_Juice
+				delitem 512,3; //Maçã
+				delitem 713,1; //Garrafa Vazia
+				getitem 531,1; //Suco de Maçã
 				mes "[Fruitz]";
-				mes "There you go~";
-				mes "I hope you enjoy!";
-				mes "Please feel free to";
-				mes "stop by for your Apple";
-				mes "and Apple Juice needs";
-				mes "at anytime, adventurer~";
+				mes "Aqui está~";
+				mes "Espero que você goste!";
+				mes "Por favor fique a vontade";
+				mes "para comprar Maçãs ou fazer";
+				mes "Sucos de Maçãs";
+				mes "quando você precisar, aventureiro~";
 				close;
 			}
 		case 2:
 			mes "[Fruitz]";
-			mes "Thanks for stopping";
-			mes "by my shop. Farewell!";
-			mes "Come by anytime when";
-			mes "you feel like having an";
-			mes "Apple to snack on~";
+			mes "Obrigado por visitar minha banca.";
+			mes "Adeus!";
+			mes "Venha quando você";
+			mes "sentir que precisa";
+			mes "de uma Maçã ~.";
 			close;
 		}
 	case 3:
 		mes "[Fruitz]";
-		mes "I used to be a wandering";
-		mes "vagabond when, one day,";
-		mes "I took a nap and something";
-		mes "struck my head and awoke";
-		mes "me from my restful slumber.";
+		mes "Eu costumava ser um andarilho";
+		mes "vagabundo, até que um dia,";
+		mes "tirei uma soneca e algo";
+		mes "atingiu minha cabeça e acordei";
+		mes "do meu sono tranquilo.";
 		next;
 		mes "[Fruitz]";
-		mes "It turns out that I was";
-		mes "sleeping beneath an apple";
-		mes "tree and that an apple fell";
-		mes "and hit me on the head.";
-		mes "I was dying of hunger and";
-		mes "was about to eat that Apple...";
+		mes "Acontece que eu estava dormindo";
+		mes "embaixo de uma Macieira";
+		mes "e foi quando uma maçã caiu";
+		mes "e atingiu minha cabeça.";
+		mes "Eu estava morrendo de fome e";
+		mes "estava prestes a comer aquela Maçã...";
 		next;
 		mes "[Fruitz]";
-		mes "But suddenly, Kain, my old";
-		mes "friend from the mining days,";
-		mes "asked me to help him around";
-		mes "on the Airship. So I did, and";
-		mes "it was there where I found some";
-		mes "people playing the Dice game.";
+		mes "Mas de repente, Kain, meu antigo";
+		mes "amigo desde os tempos de mineração,";
+		mes "me pediu para ajudá-lo aqui";
+		mes "no Aeroplano. Então eu aceitei,";
+		mes "e foi lá que encontrei pessoas";
+		mes "jogando um Jogo de Dados.";
 		next;
 		mes "[Fruitz]";
-		mes "I was bored and curious";
-		mes "and ended up wagering that";
-		mes "single Apple in a game of";
-		mes "dice. But for some reason,";
-		mes "I had this incredible lucky";
-		mes "streak. One apple became two... ";
+		mes "Estava entediado e curioso";
+		mes "e acabei apostando algumas";
+		mes "simples Maçãs no jogo dos dados.";
+		mes "Mas por alguma razão, eu";
+		mes "tive uma incrível sorte.";
+		mes "Uma maçã se multiplicou em duas... ";
 		next;
 		mes "[Fruitz]";
-		mes "Two became four and";
-		mes "before I knew it, I had";
-		mes "cornered the Apple market!";
-		mes "I won so many Apples, I just";
-		mes "started my own business here";
-		mes "on the Airship. Weird, huh?";
+		mes "Duas tornaram-se quatro e";
+		mes "antes que eu percebesse, eu";
+		mes "já tinha feito uma banca de Maçãs!";
+		mes "Ganhei tantas maçãs, e eu";
+		mes "acabei começando meu próprio negócio";
+		mes "aqui no Aeroplano. Estranho, não acha?";
 		next;
 		mes "[Fruitz]";
-		mes "So Apples are good";
-		mes "for you. They were";
-		mes "certainly very good";
-		mes "to me. Hahahahaah~!";
+		mes "Maçãs são boas para você.";
+		mes "Elas são concerteza";
+		mes "muito boas para mim.";
+		mes "Hahahahaah~!";
 		close;
 	case 4:
 		mes "[Fruitz]";
-		mes "Thank you for";
-		mes "using my shop.";
-		mes "Farewell~";
+		mes "Obrigado por utilizar";
+		mes "a minha loja.";
+		mes "Tchau~";
 		close;
 	}
 }
@@ -652,7 +652,7 @@ airplane,50,66,5	script	Vendedor de Maçãs#airplane	86,{
 //= ... -> Izlude -> Juno -> Rachel -> ...
 //============================================================ 
 
-airplane_01,243,73,0	script	#AirshipWarp-3	45,1,1,{
+airplane_01,243,73,0	script	#AeroplanoPortal-3	45,1,1,{
 	end;
 	
 OnTouch_:
@@ -679,73 +679,73 @@ OnUnhide:
 	end;
 }
 
-airplane_01,243,29,0	duplicate(#AirshipWarp-3)	#AirshipWarp-4	45,1,1
+airplane_01,243,29,0	duplicate(#AeroplanoPortal-3)	#AeroplanoPortal-4	45,1,1
 
-airplane_01,1,1,0	script	International_Airship	-1,{
+airplane_01,1,1,0	script	Aeroplano_Internacional	-1,{
 	end;
 OnInit:
 OnEnable:
 	initnpctimer;
 	end;
 OnTimer25000:
-	mapannounce "airplane_01","We are heading to Izlude.",bc_map,"0x00ff00";
+	mapannounce "airplane_01","Nós estamos partindo para Izlude.",bc_map,"0x00ff00";
 	end;
 OnTimer50000:
-	mapannounce "airplane_01","We will arrive in Izlude shortly.",bc_map,"0x00ff00";
+	mapannounce "airplane_01","Em breve chegaremos a Izlude.",bc_map,"0x00ff00";
 	end;
 OnTimer60000:
 	set $@airplanelocation2,1;
-	donpcevent "#AirshipWarp-3::OnUnhide";
-	donpcevent "#AirshipWarp-4::OnUnhide";
-	mapannounce "airplane_01","Welcome to Izlude. Have a safe trip.",bc_map,"0x00ff00";
+	donpcevent "#AeroplanoPortal-3::OnUnhide";
+	donpcevent "#AeroplanoPortal-4::OnUnhide";
+	mapannounce "airplane_01","Bem-vindo a Izlude. Tenha uma boa viagem.",bc_map,"0x00ff00";
 	end;
 OnTimer70000:
-	mapannounce "airplane_01","We are currently in Izlude. The Airship will take off shortly.",bc_map,"0x00ff00";
+	mapannounce "airplane_01","Atualmente nós estamos em Izlude. O Aeroplano irá decolar em instantes.",bc_map,"0x00ff00";
 	end;
 OnTimer80000:
-	donpcevent "#AirshipWarp-3::OnHide";
-	donpcevent "#AirshipWarp-4::OnHide";
-	mapannounce "airplane_01","The Airship is now taking off. Our next destination is Juno.",bc_map,"0x70dbdb";
+	donpcevent "#AeroplanoPortal-3::OnHide";
+	donpcevent "#AeroplanoPortal-4::OnHide";
+	mapannounce "airplane_01","O Aeroplano está decolando agora. Seu próximo destino é Juno.",bc_map,"0x70dbdb";
 	end;
 OnTimer105000:
-	mapannounce "airplane_01","We are heading to Juno.",bc_map,"0x70dbdb";
+	mapannounce "airplane_01","Nós estamos partindo para Juno.",bc_map,"0x70dbdb";
 	end;
 OnTimer130000:
-	mapannounce "airplane_01","We will arrive in Juno shortly.",bc_map,"0x70dbdb";
+	mapannounce "airplane_01","Em breve chegaremos a Juno.",bc_map,"0x70dbdb";
 	end;
 OnTimer140000:
 	set $@airplanelocation2,2;
-	donpcevent "#AirshipWarp-3::OnUnhide";
-	donpcevent "#AirshipWarp-4::OnUnhide";
-	mapannounce "airplane_01","Welcome to Juno. Have a safe trip.",bc_map,"0x70dbdb";
+	donpcevent "#AeroplanoPortal-3::OnUnhide";
+	donpcevent "#AeroplanoPortal-4::OnUnhide";
+	mapannounce "airplane_01","Bem-vindo a Juno. Tenha uma boa viagem.",bc_map,"0x70dbdb";
 	end;
 OnTimer150000:
-	mapannounce "airplane_01","We are currently in Juno. The Airship will leave shortly.",bc_map,"0x70dbdb";
+	mapannounce "airplane_01","Atualmente nós estamos em Juno. O Aeroplano irá decolar em instantes.",bc_map,"0x70dbdb";
 	end;
 OnTimer160000:
-	donpcevent "#AirshipWarp-3::OnHide";
-	donpcevent "#AirshipWarp-4::OnHide";
-	mapannounce "airplane_01","The Airship is leaving the ground. Our next destination is Rachel.",bc_map,"0xFF8200";
+	donpcevent "#AeroplanoPortal-3::OnHide";
+	donpcevent "#AeroplanoPortal-4::OnHide";
+	mapannounce "airplane_01","O Aeroplano está decolando agora. Seu próximo destino é Rachel.",bc_map,"0xFF8200";
 	end;
 OnTimer185000:
-	mapannounce "airplane_01","We are heading to Rachel.",bc_map,"0xFF8200";
+	mapannounce "airplane_01","Nós estamos partindo para Rachel.",bc_map,"0xFF8200";
 	end;
 OnTimer210000:
-	mapannounce "airplane_01","We will arrive in Rachel shortly.",bc_map,"0xFF8200";
+	mapannounce "airplane_01","Em breve chegaremos a Rachel.",bc_map,"0xFF8200";
 	end;
 OnTimer220000:
 	set $@airplanelocation2,0;
-	donpcevent "#AirshipWarp-3::OnUnhide";
-	donpcevent "#AirshipWarp-4::OnUnhide";
-	mapannounce "airplane_01","Welcome to Rachel. Have a safe trip.",bc_map,"0xFF8200";
+	donpcevent "#AeroplanoPortal-3::OnUnhide";
+	donpcevent "#AeroplanoPortal-4::OnUnhide";
+	mapannounce "airplane_01","Bem-vindo a Rachel. Tenha uma boa viagem.",bc_map,"0xFF8200";
 	end;
 OnTimer230000:
-	mapannounce "airplane_01","We are currently in Rachel. The Airship will take off shortly.",bc_map,"0xFF8200";
+	mapannounce "airplane_01","Atualmente nós estamos em Rachel. O Aeroplano irá decolar em instantes.",bc_map,"0xFF8200";
 	end;
 OnTimer240000:
-	donpcevent "#AirshipWarp-3::OnHide";
-	donpcevent "#AirshipWarp-4::OnHide";
-	mapannounce "airplane_01","The Airship is now taking off. Our next destination is Izlude.",bc_map,"0x00ff00";
+	donpcevent "#AeroplanoPortal-3::OnHide";
+	donpcevent "#AeroplanoPortal-4::OnHide";
+	mapannounce "airplane_01","O Aeroplano está decolando agora. Seu próximo destino é Izlude.",bc_map,"0x00ff00";
 	stopnpctimer;
 	set .moninv, .moninv + 1;
 	if (.moninv == 7) {
@@ -759,123 +759,123 @@ OnTimer240000:
 	end;
 }
 
-airplane_01,240,64,5	script	Exit#airplane_011a::ExitAirplane01	857,{
+airplane_01,240,64,5	script	Saída#airplane_011a::ExitAirplane01	857,{
 	end;
 }
-airplane_01,247,64,5	duplicate(ExitAirplane01)	Exit#airplane_011b	857
-airplane_01,240,40,1	duplicate(ExitAirplane01)	Exit#airplane_012a	857
-airplane_01,247,40,1	duplicate(ExitAirplane01)	Exit#airplane_012b	857
+airplane_01,247,64,5	duplicate(ExitAirplane01)	Saída#airplane_011b	857
+airplane_01,240,40,1	duplicate(ExitAirplane01)	Saída#airplane_012a	857
+airplane_01,247,40,1	duplicate(ExitAirplane01)	Saída#airplane_012b	857
 
-airplane_01,250,58,2	script	Airship Staff#airplane01	67,{
-	mes "[Airship Staff]";
-	mes "Welcome";
-	mes "to the Airship.";
-	mes "How may I help you?";
+airplane_01,250,58,2	script	Equipe do Aeroplano#airplane01	67,{
+	mes "[Assistente do Aeroplano]";
+	mes "Bem-vind"+(Sex?"o":"a")+" ";
+	mes "ao Aeroplano.";
+	mes "Como posso lhe ajudar?";
 	next;
-	switch (select("Using the Airship:Captain's Cabin:Facilities:Cancel")) {
+	switch (select("Embarcar no Aeroplano:Cabine do Capitão:Atrativos:Cancelar")) {
 	case 1:
-		mes "[Airship Staff]";
-		mes "When you see a broadcast";
-		mes "announcing that we have";
-		mes "arrived at your destination,";
-		mes "please use one of the exits";
-		mes "located at the north and";
-		mes "south ends of the Airship.";
+		mes "[Assistente do Aeroplano]";
+		mes "Quando você ver o aviso";
+		mes "anunciando que chegamos no seu destino";
+		mes "desejado, por favor,";
+		mes "use uma das saídas localizadas";
+		mes "nas partes norte e";
+		mes "sul do Aeroplano.";
 		next;
-		mes "[Airship Staff]";
-		mes "If you happen to miss";
-		mes "your stop, don't worry.";
-		mes "The Airship is constantly";
-		mes "en route and you'll get";
-		mes "another chance to arrive";
-		mes "to your intended destination.";
+		mes "[Assistente do Aeroplano]";
+		mes "Caso você perca o momento de";
+		mes "sua parada, não se preocupe.";
+		mes "O Aeroplano está constantemente";
+		mes "em uma rota única e você terá";
+		mes "outra chance para descer no";
+		mes "destino exato que quiser.";
 		close;
 	case 2:
-		mes "[Airship Staff]";
-		mes "The Captain's Cabin";
-		mes "is located at the front";
-		mes "of the Airship. There, you";
-		mes "can meet the captain and";
-		mes "the pilot of the Airship.";
+		mes "[Assistente do Aeroplano]";
+		mes "A Cabine do Capitão fica na";
+		mes "parte frontal do Aeroplano.";
+		mes "Lá, você pode";
+		mes "conhecer o capitão e o";
+		mes "piloto do Aeroplano.";
 		close;
 	case 3:
-		mes "[Airship Staff]";
-		mes "The Airship provides";
-		mes "various Mini Games for";
-		mes "the entertainment of all";
-		mes "our passengers. We invite";
-		mes "you to try your luck and skills";
-		mes "in the Airship's Mini Games~";
+		mes "[Assistente do Aeroplano]";
+		mes "O Aeroplano possui vários";
+		mes "mini-jogos para o entretenimento";
+		mes "de todos os passageiros.";
+		mes "Você está convidad"+(Sex?"o":"a")+" ";
+		mes "a testar sua sorte no";
+		mes "Mini-Jogos do Aeroplano~";
 		close;
 	case 4:
-		mes "[Airship Staff]";
-		mes "Well, I hope you";
-		mes "your flight aboard";
-		mes "our Airships. Thank";
-		mes "you and have a good day.";
+		mes "[Assistente do Aeroplano]";
+		mes "Bem, desejo-lhe uma boa estadia";
+		mes "durante o vôo";
+		mes "em nosso Aeroplano.";
+		mes "Obrigado e tenha um bom dia.";
 		close;
 	}
 }
 
-airplane_01,50,66,5	script	Apple Merchant#air01	86,{
+airplane_01,50,66,5	script	Vendedor de Maçãs#air01	86,{
 	if (checkweight(1201,1) == 0) {
-		mes "- Wait a minute !! -";
-		mes "- Currently you're carrying -";
-		mes "- too many items with you. -";
-		mes "- Please try again -";
-		mes "- after you loose some weight. -";
+		mes "- Espere um minuto !! -";
+		mes "- Atualmente você está carregando -";
+		mes "- muitos itens com você. -";
+		mes "- Por favor volte novamente -";
+		mes "- após perder um pouco de seu peso. -";
 		close;
 	}
 	mes "[Meltz]";
-	mes "Welcome to Meltz's";
-	mes "Shop where you can";
-	mes "purchase Apples or grind";
-	mes "them to make Apple Juice.";
+	mes "Bem-vindo a Banca de Frutas";
+	mes "onde você pode comprar Maçãs";
+	mes "ou juntar ingredientes para";
+	mes "fazer o Suco de Maçã.";
 	next;
-	switch (select("Buy Apples.:Make Apple Juice.:Cancel.")) {
+	switch (select("Comprar Maçãs.:Fazer Suco de Maçã.:Cancelar.")) {
 	case 1:
 		mes "[Meltz]";
-		mes "Please enter the amount";
-		mes "of Apples that you wish to";
-		mes "buy. Each Apple is 15 zeny";
-		mes "and you can buy a maximum";
-		mes "of 500 at a time. Please enter";
-		mes "'0' to cancel your order.";
+		mes "Por favor me diga a quantidade";
+		mes "de Maçãs que você deseja comprar.";
+		mes "Cada Maçã custa 15 zeny";
+		mes "e você pode comprar no máximo";
+		mes "500 por vez. Digite '0' para";
+		mes "cancelar sua compra.";
 		next;
 		while (1) {
 			input .@input;
 			set .@pay, .@input * 15;
 			if (.@input == 0) {
 				mes "[Meltz]";
-				mes "Thanks for stopping";
-				mes "by my shop. Farewell!";
-				mes "Come by anytime when";
-				mes "you feel like having an";
-				mes "Apple to snack on~";
+				mes "Obrigado por visitar minha banca.";
+				mes "Adeus!";
+				mes "Venha quando você";
+				mes "sentir que precisa";
+				mes "de uma Maçã.~";
 				close;
 			}
 			else if (.@input < 1 || .@input > 500) {
 				mes "[Meltz]";
-				mes "You've entered a number";
-				mes "higher than the maximum";
-				mes "value of 500. Please enter";
-				mes "the number of Apples you";
-				mes "wish to purchase again.";
+				mes "Você escolheu uma quantia";
+				mes "muito alta, o valor";
+				mes "máximo são 500. Por favor";
+				mes "digite o número de";
+				mes "maçãs que você deseja comprar.";
 				next;
 			}
 			else {
 				mes "[Meltz]";
-				mes "A total of ^FF0000" + .@input + "^000000 Apples";
-				mes "will cost you ^FF0000" + .@pay + "^000000 zeny.";
-				mes "Would you like to continue?";
+				mes "Um total de ^FF0000" + .@input + "^000000 Maçãs";
+				mes "irá custar a você ^FF0000" + .@pay + "^000000 zeny.";
+				mes "Você gostaria de continuar?";
 				next;
-				if (select("Yes:No") == 2) {
+				if (select("Sim:Não") == 2) {
 					mes "[Meltz]";
-					mes "Thanks for stopping";
-					mes "by my shop. Farewell!";
-					mes "Come by anytime when";
-					mes "you feel like having an";
-					mes "Apple to snack on~";
+					mes "Obrigado por visitar minha banca.";
+					mes "Adeus!";
+					mes "Venha quando você";
+					mes "sentir que precisa";
+					mes "de uma Maçã.~";
 					close;
 				}
 				break;
@@ -883,94 +883,94 @@ airplane_01,50,66,5	script	Apple Merchant#air01	86,{
 		}
 		if (Zeny < .@pay) {
 			mes "[Meltz]";
-			mes "I'm sorry, you don't have";
-			mes "enough money with you.";
-			mes "Please check your funds or";
-			mes "purchase less Apples.";
+			mes "Me desculpe, mas você não possui";
+			mes "a quantidade de zenys necessária para comprar essas Maçãs.";
+			mes "Por favor verifique a quantidade de zenys";
+			mes "que você possui e quantas Maçãs quer comprar.";
 			close;
 		}
 		else if (checkweight(512,.@input) == 0) {
 			mes "[Meltz]";
-			mes "Hmm, I don't think you've";
-			mes "got enough room to carry";
-			mes "this many Apples. You might";
-			mes "want to free up your inventory";
-			mes "space.";
+			mes "Humm, eu acho que você não pode carregar mais itens";
+			mes "em seu inventário, assim não pode comprar mais Maçãs.";
+			mes "Você poderia liberar um pouco";
+			mes "de espaço em seu";
+			mes "inventário?";
 			close;
 		}
 		else {
 			set Zeny, Zeny - .@pay;
 			getitem 512,.@input; //Apple
 			mes "[Meltz]";
-			mes "Thanks for stopping by";
-			mes "my shop. I hope you enjoy";
-			mes "the flavor of these Apples~!";
+			mes "Obrigado por visitar minha banca.";
+			mes "Adeus! Venha quando você";
+			mes "sentir que precisa de uma Maçã ~!";
 			close;
 		}
 	case 2:
 		mes "[Meltz]";
-		mes "Okay, I'll need";
-		mes "^FF00003 Apples and 1 Empty Bottle^000000";
-		mes "to make 1 Apple Juice for you.";
-		mes "Would you like to proceed?";
+		mes "Tudo bem, irei precisar de";
+		mes "^FF00003 Maçãs e 1 Garrafa Vazia^000000";
+		mes "para criar 1 Suco de Maçã para você.";
+		mes "Você deseja continuar?";
 		next;
-		switch (select("Yes:No")) {
+		switch (select("Sim:Não")) {
 		case 1:
 			if (countitem(512) < 3 || countitem(713) < 1) {
 				mes "[Meltz]";
-				mes "I'm sorry, but you don't";
-				mes "have enough materials to";
-				mes "create a bottle of Apple Juice.";
-				mes "Remember, I need 3 Apples";
-				mes "and 1 Empty Bottle to do it.";
+				mes "Me desculpe,mas você não possui";
+				mes "os materiais suficientes para criar";
+				mes "uma Garrafa de Suco de Maçã.";
+				mes "Lembre-se, irei precisar de";
+				mes "3 Maçãs e 1 Garrafa Vazia.";
 				close;
 			}
 			else {
 				mes "[Meltz]";
-				mes "Thank you, please wait.";
+				mes "Obrigado, por favor espere um momento.";
 				next;
-				mes "^3355FF*Grind* *Grind*";
-				mes "*Grind* *Grind*";
+				mes "^3355FF*Moer* *Moer*";
+				mes "*Moer* *Moer*";
 				mes "*Clang...!*^000000";
 				next;
-				delitem 512,3; //Apple
-				delitem 713,1; //Empty_Bottle
-				getitem 531,1; //Apple_Juice
+				delitem 512,3; //Maçã
+				delitem 713,1; //Garrafa Vazia
+				getitem 531,1; //Suco de Maçã
 				mes "[Meltz]";
-				mes "There you go~";
-				mes "Please come again.";
+				mes "Aqui está~";
+				mes "Por favor, volte sempre.";
 				close;
 			}
 		case 2:
 			mes "[Meltz]";
-			mes "Thanks for stopping";
-			mes "by my shop. Farewell!";
-			mes "Come by anytime when";
-			mes "you feel like having an";
-			mes "Apple to snack on~";
+			mes "Obrigado por visitar minha banca.";
+			mes "Adeus!";
+			mes "Venha quando você";
+			mes "sentir que";
+			mes "precisa de uma Maçã. ~";
 			close;
 		}
 	case 3:
 		mes "[Meltz]";
-		mes "Thanks for stopping";
-		mes "by my shop. Farewell!";
-		mes "Come by anytime when";
-		mes "you feel like having an";
-		mes "Apple to snack on~";
+		mes "Obrigado por visitar minha banca.";
+		mes "Adeus!";
+		mes "Venha quando você";
+		mes "sentir que";
+		mes "precisa de uma Maçã.~";
 		close;
 	}
 }
 
-airplane_01,221,158,2	script	Pilot#airplane_01	852,{
+airplane_01,221,158,2	script	Piloto#airplane_01	852,{
 	switch (rand(1,4)) {
 	case 1:
-		mes "[Pilot]";
+		mes "[Piloto]";
 		mes "Longitude, 131 degrees east.";
 		mes "Latitude, 37 degrees north.";
 		mes "We're right on course, captain.";
 		close;
 	case 2:
-		mes "[Pilot]";
+		mes "[Piloto]";
 		mes "Looks like a really";
 		mes "cloudy day. Always hard";
 		mes "to navigate when the skies";
@@ -978,7 +978,7 @@ airplane_01,221,158,2	script	Pilot#airplane_01	852,{
 		mes "need to amp the radar.";
 		close;
 	case 3:
-		mes "[Pilot]";
+		mes "[Piloto]";
 		mes "The Captain is a good";
 		mes "man and I can't think of";
 		mes "a finer person to command";
@@ -990,18 +990,18 @@ airplane_01,221,158,2	script	Pilot#airplane_01	852,{
 		mes "^ff0000Less chit-chat^000000";
 		mes "^ff0000and more piloting!^000000";
 		next;
-		mes "[Pilot]";
+		mes "[Piloto]";
 		mes "R-right away, sir!";
 		mes "(See what I mean?)";
 		close;
 	default:
-		mes "[Pilot]";
+		mes "[Piloto]";
 		mes "This uniform is";
 		mes "really dapper, but";
 		mes "it's way too thick to";
 		mes "wear around the Airship.";
 		next;
-		mes "[Pilot]";
+		mes "[Piloto]";
 		mes "...";
 		mes "......";
 		mes "No one ever really";
@@ -1010,7 +1010,7 @@ airplane_01,221,158,2	script	Pilot#airplane_01	852,{
 		mes "I could just strip to my boxers.";
 		next;
 		emotion e_omg;
-		mes "[Pilot]";
+		mes "[Piloto]";
 		mes "Oh...! Hello there!";
 		mes "E-e-enjoying your flight?!";
 		close;
